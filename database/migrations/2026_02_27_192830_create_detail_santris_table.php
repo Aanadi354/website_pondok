@@ -27,7 +27,7 @@ return new class extends Migration
                 'cepatan',
                 'saringan',
                 'MT'
-            ]);
+            ])->nullable();
 
             $table->timestamps();
         });
