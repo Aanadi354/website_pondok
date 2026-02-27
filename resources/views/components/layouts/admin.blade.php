@@ -275,7 +275,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="{{ route('dashboard') }}">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link" href="{{ route('dashboard') }}">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -319,6 +319,16 @@
           <i class="bi bi-menu-button-wide"></i><span>Data Santri</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          @auth
+              @if(in_array(auth()->user()->role, ['guru', 'admin']))
+                  <li>
+                      <a href="{{ route('list-santri') }}">
+                          <i class="bi bi-circle"></i>
+                          <span>Database Santri</span>
+                      </a>
+                  </li>
+              @endif
+          @endauth
           <li>
             @auth
     @if(auth()->user()->role === 'guru')
@@ -326,21 +336,17 @@
             <i class="bi bi-circle"></i><span>Absensi</span>
         </a>
     @endif
-@endauth
-@auth
-    @if(in_array(auth()->user()->role, ['guru', 'admin']))
-        <a href="{{ route('absensi.index') }}">
-            <i class="bi bi-circle"></i><span>Absensi</span>
-        </a>
-    @endif
-@endauth
+          @endauth
+          @auth
+              @if(in_array(auth()->user()->role, ['guru', 'admin']))
+                  <a href="{{ route('absensi.index') }}">
+                      <i class="bi bi-circle"></i><span>Absensi</span>
+                  </a>
+              @endif
+          @endauth
 
-          </li>
-          <li>
-            <a href="components-accordion.html">
-              <i class="bi bi-circle"></i><span>List Data Santri</span>
-            </a>
-          </li>
+                    </li>
+                    
           <li>
             <a href="components-badges.html">
               <i class="bi bi-circle"></i><span>Badges</span>
@@ -405,10 +411,10 @@
       </li><!-- End Components Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" data-bs-target="#Absensi-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Absensi</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="Absensi-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="forms-elements.html">
               <i class="bi bi-circle"></i><span>Form Elements</span>
