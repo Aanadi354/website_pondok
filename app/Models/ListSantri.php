@@ -8,18 +8,19 @@ class ListSantri extends Model
 {
     protected $table = 'list_santris';
 
-    protected $fillable = [
+        protected $fillable = [
         'nomor_induk',
         'nama',
         'jenis_kelamin',
         'alamat',
         'orang_tua',
-        'nomor'
+        'nomor',
+        'foto',
+        'id_kelas'
     ];
 
-    // 🔥 Tambahkan ini
-    public function detail()
+    public function kelas()
     {
-        return $this->hasOne(DetailSantri::class, 'santri_id');
+        return $this->belongsTo(Kelas::class, 'id_kelas');
     }
 }

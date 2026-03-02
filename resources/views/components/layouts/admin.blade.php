@@ -417,22 +417,27 @@
         <ul id="Absensi-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="forms-elements.html">
-              <i class="bi bi-circle"></i><span>Form Elements</span>
+              <i class="bi bi-circle"></i><span>Absensi Kelas Pegon</span>
             </a>
           </li>
           <li>
             <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
+              <i class="bi bi-circle"></i><span>Absensi Kelas Bacaan</span>
             </a>
           </li>
           <li>
             <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Form Editors</span>
+              <i class="bi bi-circle"></i><span>Absensi Kelas Lambatan</span>
             </a>
           </li>
           <li>
             <a href="forms-validation.html">
-              <i class="bi bi-circle"></i><span>Form Validation</span>
+              <i class="bi bi-circle"></i><span>Absensi Kelas Cepatan</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-validation.html">
+              <i class="bi bi-circle"></i><span>Absensi Kelas Saringan</span>
             </a>
           </li>
         </ul>
