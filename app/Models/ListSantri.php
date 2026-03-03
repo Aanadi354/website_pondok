@@ -23,4 +23,8 @@ class ListSantri extends Model
     {
         return $this->belongsTo(Kelas::class, 'id_kelas');
     }
+    public function absensiDetails()
+    {
+        return $this->hasMany(AbsensiDetail::class, 'id_santri');
+    }
 }

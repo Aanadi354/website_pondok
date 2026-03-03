@@ -39,4 +39,8 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($value);
     }
+    public function absensiYangDiinput()
+    {
+        return $this->hasMany(Absensi::class, 'id_user');
+    }
 }
