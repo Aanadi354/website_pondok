@@ -13,7 +13,6 @@ class DatabaseSeeder extends Seeder
         // Jalankan UserSeeder
         $this->call([
             UserSeeder::class,
-            GuruSeeder::class, // jika ingin sekalian jalankan guru
             KelasSeeder::class,
         ]);
     }
