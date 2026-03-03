@@ -31,8 +31,8 @@
                     <th>Alamat</th>
                     <th>Orang Tua</th>
                     <th>Nomor HP</th>
-                    <th>Keterangan</th>
-                    <th>Status Kelulusan</th>
+                    <th>Kelas</th>
+                    <th>Status Santri</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
@@ -52,13 +52,7 @@
                     <td>{{ $s->alamat }}</td>
                     <td>{{ $s->orang_tua }}</td>
                     <td>{{ $s->nomor }}</td>
-                    <td>
-                      @if($s->keterangan == 'Aktif')
-                        <span class="badge bg-success">Aktif</span>
-                      @else
-                        <span class="badge bg-danger">Non Aktif</span>
-                      @endif
-                    </td>
+                    <td>{{ $s->kelas->nama_kelas ?? '-' }}</td>
                     <td>{{ $s->status }}</td>
                     <!-- Kolom Aksi -->
     <td>

@@ -293,20 +293,19 @@
               <i class="bi bi-circle"></i><span>Data Akun</span>
             </a>
           </li>
-
           <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
+            <a href="{{ route('data-guru') }}">
+              <i class="bi bi-circle"></i><span>Data Guru</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ route('data-kelas') }}">
+              <i class="bi bi-circle"></i><span>Data Kelas</span>
             </a>
           </li>
           <li>
             <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Form Editors</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-validation.html">
-              <i class="bi bi-circle"></i><span>Form Validation</span>
+              <i class="bi bi-circle"></i><span>Data Rekap Absensi</span>
             </a>
           </li>
         </ul>
@@ -416,7 +415,7 @@
         </a>
         <ul id="Absensi-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="{{ route('absensi.kelas-pegon') }}">
               <i class="bi bi-circle"></i><span>Absensi Kelas Pegon</span>
             </a>
           </li>
