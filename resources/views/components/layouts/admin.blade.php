@@ -304,7 +304,7 @@
             </a>
           </li>
           <li>
-            <a href="forms-editors.html">
+            <a href="{{ route('rekap.absensi') }}">
               <i class="bi bi-circle"></i><span>Data Rekap Absensi</span>
             </a>
           </li>

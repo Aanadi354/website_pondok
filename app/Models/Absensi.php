@@ -6,11 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Absensi extends Model
 {
-    protected $table = 'absensis';
-
     protected $fillable = [
         'id_kelas',
         'id_user',
+        'id_sesi',
         'tanggal',
     ];
 
@@ -40,5 +39,9 @@ class Absensi extends Model
     public function details()
     {
         return $this->hasMany(AbsensiDetail::class, 'id_absensi');
+    }
+    public function sesi()
+    {
+        return $this->belongsTo(Sesi::class, 'id_sesi');
     }
 }

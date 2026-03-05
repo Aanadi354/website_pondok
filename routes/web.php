@@ -12,6 +12,7 @@ use App\Livewire\MasterAdmin\SantriDetail;
 use App\Livewire\MasterAdmin\DataGuru;
 use App\Livewire\MasterAdmin\DataKelas;
 use App\Livewire\Absensi\AbsensiKelasPegon;
+use App\Livewire\MasterAdmin\DataRekapAbsensi;
 
 
 Route::get('/', Index::class);
@@ -27,4 +28,6 @@ Route::get('/data-guru', DataGuru::class)->name('data-guru');
 Route::get('/data-kelas', DataKelas::class)->name('data-kelas');
 Route::get('/absensi-kelas-pegon', AbsensiKelasPegon::class)
     ->name('absensi.kelas-pegon');
+Route::get('/rekap-absensi', DataRekapAbsensi::class)
+    ->name('rekap.absensi');
 
